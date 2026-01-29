@@ -14,9 +14,6 @@ COPY src ./src
 # Build the application
 RUN mvn package
 
-# Optional: Add a step to run tests (if any are added later)
-# RUN mvn test
-
 # Use a smaller image for the final application
 FROM openjdk:11-jre-slim
 
@@ -25,3 +22,5 @@ COPY --from=build /app/target/*.jar app.jar
 
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# Note: If tests are added in the future, consider adding a test stage in the Jenkinsfile.
