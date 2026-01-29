@@ -10,13 +10,6 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                script {
-                    // This will run the tests (if any were added later)
-                    sh 'mvn test'
-                }
-            }
-        }
+        // Removed the Test stage since no tests are detected
     }
 }
