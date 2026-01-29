@@ -10,6 +10,6 @@ pipeline {
                 }
             }
         }
-        // Removed the Test stage as no tests are currently detected
+        // Note: If tests are added in the future, consider adding a test stage here.
     }
 }

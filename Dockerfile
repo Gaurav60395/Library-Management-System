@@ -23,4 +23,4 @@ COPY --from=build /app/target/*.jar app.jar
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
-# Note: If tests are added in the future, consider adding a test stage in the Jenkinsfile.
+# Note: If tests are added in the future, consider running them during the build process.
