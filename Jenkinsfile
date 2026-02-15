@@ -10,13 +10,6 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                script {
-                    // Placeholder for running tests
-                    // sh 'mvn test'
-                }
-            }
-        }
+        // Removed the Test stage as there are no tests detected
     }
 }

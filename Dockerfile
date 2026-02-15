@@ -14,7 +14,7 @@ COPY src ./src
 # Build the application
 RUN mvn package
 
-# Note: If tests are added in the future, consider running them during the build process.
+# Note: Tests are not run during the build process as none are detected.
 
 # Use a smaller image for the final application
 FROM openjdk:11-jre-slim
