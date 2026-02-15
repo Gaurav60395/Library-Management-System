@@ -14,6 +14,8 @@ COPY src ./src
 # Build the application
 RUN mvn package
 
+# Note: If tests are added in the future, consider running them during the build process.
+
 # Use a smaller image for the final application
 FROM openjdk:11-jre-slim
 
@@ -22,5 +24,3 @@ COPY --from=build /app/target/*.jar app.jar
 
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
-# Note: If tests are added in the future, consider running them during the build process.

@@ -10,6 +10,13 @@ pipeline {
                 }
             }
         }
-        // Note: If tests are added in the future, consider adding a test stage here.
+        stage('Test') {
+            steps {
+                script {
+                    // Placeholder for running tests
+                    // sh 'mvn test'
+                }
+            }
+        }
     }
 }
